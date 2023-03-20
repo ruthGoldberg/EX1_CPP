@@ -84,10 +84,12 @@ int GetAdptArraySize(PAdptArray adptArray){
 }
 
 void PrintDB(PAdptArray adptArray){
-    for (size_t i = 0; i < adptArray->size ; i++)
-    {
-        if(adptArray->array[i] != NULL)
-            adptArray->print(adptArray->array[i]);
+    if(adptArray !=NULL){
+        for (size_t i = 0; i < adptArray->size ; i++)
+        {
+            if(adptArray->array[i] != NULL)
+                adptArray->print(adptArray->array[i]);
+        }
     }
     
 }
