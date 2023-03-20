@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "AdptArray.h"
 
-
+//I was helped by the answers to the test moed A in the model
 typedef struct AdptArray_
 {
     size_t size;
@@ -62,7 +62,8 @@ Result SetAdptArrayAt(PAdptArray adptArray, int index, PElement newElement){
     }
     if(adptArray->array[index] != NULL)
         adptArray->delete(adptArray->array[index]);
-    adptArray->array[index] = adptArray->copy(newElement);
+    if(newElement != NULL)
+        adptArray->array[index] = adptArray->copy(newElement);
     return SUCCESS;
 }
 
